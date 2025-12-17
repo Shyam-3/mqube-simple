@@ -1,0 +1,234 @@
+/* ================= STUDENT REGISTRATION HERO ================= */
+body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+.student-hero {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    background: url("../images/teacher/teacher-bg.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: 80px;  */    /* ensures hero appears below navbar */
+}
+
+.student-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 45, 100, 0.45); /* blue overlay */
+}
+
+.student-hero-content {
+    position: relative;
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+.student-hero-content h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.student-hero-content p {
+    font-size: 18px;
+    font-weight: 300;
+}
+/* Background */
+.student-form-section {
+    padding: 60px 0;
+    background: url("../images/teacher/teacher-form-bg.jpg") center repeat;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Form Box */
+.form-box {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 28px;
+    margin: 30px auto;
+    border-top: 4px solid #F5C451;
+    box-shadow: 0px 4px 14px rgba(0,0,0,0.10);
+    width: 90%;
+}
+
+.form-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1F3C88;
+    margin-bottom: 15px;
+}
+
+/* Labels */
+.form-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #1F1F1F;
+}
+
+/* Inputs */
+.custom-input {
+    height: 44px;
+    border-radius: 8px !important;
+    border: 2px solid #AFC8E6;
+}
+
+/* Textarea */
+textarea.custom-input {
+    height: auto;
+}
+
+/* Radio buttons */
+.radio-option {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.radio-option input {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    accent-color: #3068B1;
+}
+
+/* Submit + Reset buttons */
+.button-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-reset {
+    background: #fff;
+    border: 2px solid #FF6B6B;
+    color: #FF6B6B;
+    padding: 8px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-reset:hover {
+    background: #FF6B6B;
+    color: #fff;
+}
+
+.btn-submit {
+    background: #F3C331;
+    border: none;
+    padding: 8px 35px;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #000;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background: #e6b82c;
+}
+/* ======== POPUP OVERLAY ======== */
+.overlay {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(2px);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* ======== POPUP BOX ======== */
+.popup-box {
+    width: 420px;
+    background: white;
+    padding: 30px 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0px 8px 25px rgba(0,0,0,0.15);
+    animation: fadeIn 0.25s ease-out;
+}
+
+/* Fade effect */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.popup-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.popup-text {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+/* ======== POPUP BUTTONS ======== */
+.popup-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn-cancel,
+.btn-yes {
+    padding: 8px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.btn-cancel {
+    background: #e0e0e0;
+}
+
+.btn-yes {
+    background: #ffc107;
+    color: black;
+    font-weight: 600;
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+/* Simple typography scaling */
+
+@media (max-width: 992px) {
+    .student-hero-content h1 { font-size: 36px; }
+    .student-hero-content p { font-size: 16px; }
+    .form-title { font-size: 17px; }
+    .form-label { font-size: 14px; }
+    .popup-title { font-size: 20px; }
+}
+
+@media (max-width: 768px) {
+    .student-hero-content h1 { font-size: 28px; }
+    .student-hero-content p { font-size: 14px; }
+    .student-form-section { padding: 30px 20px; }
+    .form-title { font-size: 16px; }
+    .form-label { font-size: 13px; }
+    .btn-reset, .btn-submit { font-size: 14px; padding: 10px 20px; }
+}
+
+@media (max-width: 576px) {
+    .student-hero-content h1 { font-size: 22px; }
+    .student-hero-content p { font-size: 12px; }
+    .student-form-section { padding: 25px 15px; }
+    .form-title { font-size: 14px; }
+    .form-label { font-size: 12px; }
+    .btn-reset, .btn-submit { font-size: 13px; padding: 9px 18px; }
+    .popup-title { font-size: 16px; }
+    .popup-text { font-size: 12px; }
+}

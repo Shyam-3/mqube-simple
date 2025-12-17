@@ -1,0 +1,267 @@
+/* ---------- SERVICES PAGE STYLES ---------- */
+body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+/* Services Header */
+.services-header {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    background: url("../images/services/service.png") center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 70px; img to the top */ 
+}
+
+.services-header-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(20, 80, 160, 0.3);
+    z-index: 1;
+}
+
+.services-header h1 {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    font-size: 48px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Service Cards Section */
+.service-cards-section {
+    font-family: 'Poppins', sans-serif;
+    background: #fff;
+    overflow: hidden;
+}
+
+.service-card-wrapper {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 20px 0; /* Top/bottom padding for icon overflow space */
+}
+
+.service-card {
+    position: relative;
+    border-radius: 12px;
+    border: 2px solid #d9e9f7;
+    min-height: 80px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* BLUE LEFT CARDS - Icon on left side */
+.card-blue-left {
+    background: #cfe3ff;
+    border-color: #a8d0f7;
+}
+
+.card-blue-left .icon-box-wrapper {
+    order: 1;
+    flex-shrink: 0;
+    margin-right: 20px;
+    margin-top: -20px; /* Pop icon up */
+    margin-bottom: -20px; /* Pop icon down */
+}
+
+.card-blue-left .card-content {
+    order: 2;
+    flex: 1;
+}
+
+/* GREEN RIGHT CARDS - Icon on right side */
+.card-green-right {
+    background: #d4f4dd;
+    border-color: #a8e6b8;
+}
+
+.card-green-right .icon-box-wrapper {
+    order: 2;
+    flex-shrink: 0;
+    margin-left: 20px;
+    margin-top: -20px; /* Pop icon up */
+    margin-bottom: -20px; /* Pop icon down */
+}
+
+.card-green-right .card-content {
+    order: 1;
+    flex: 1;
+}
+
+/* Icon Box Wrapper */
+.icon-box-wrapper {
+    flex-shrink: 0;
+    width: 110px;
+    height: 110px;
+    position: relative;
+    z-index: 3;
+}
+
+/* Tilted Square Boxes */
+.tilted-box {
+    width: 110px;
+    height: 110px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Blue Box - Tilted Left (rotate -10deg) */
+.blue-box {
+    background: #3068b1;
+    transform: rotate(-10deg);
+}
+
+/* Green Box - Tilted Right (rotate 10deg) */
+.green-box {
+    background: #4caf50;
+    transform: rotate(10deg);
+}
+
+.tilted-box img {
+    max-width: 85%;
+    max-height: 85%;
+    object-fit: contain;
+    transform: rotate(0deg); /* Keep image upright */
+}
+
+/* Card Content Background */
+.card-content {
+    flex: 1;
+    position: relative;
+    z-index: 2;
+    min-width: 0;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+/* Blue Background for Odd Cards */
+.blue-bg {
+    background: transparent;
+}
+
+/* Green Background for Even Cards */
+.green-bg {
+    background: transparent;
+}
+
+.card-content h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #2e5fa8;
+    margin-bottom: 8px;
+}
+
+.card-content p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+    margin: 0;
+}
+
+/* Fast Track Course Section */
+.fast-track-section {
+    background: #fff;
+    font-family: 'Poppins', sans-serif;
+    padding: 40px 0 80px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 600;
+    color: #2e5fa8;
+    margin-bottom: 20px;
+}
+
+.subject-card {
+    background: #d9ebff;
+    border-radius: 12px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.subject-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.subject-card img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.subject-card p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #2e5fa8;
+    margin: 0;
+}
+
+/* Simple Card Hover Animation */
+.card-blue-left,
+.card-green-right {
+    transition: transform 0.3s ease-in;
+}
+
+.card-blue-left:hover {
+    transform: translateX(20px);
+}
+
+.card-green-right:hover {
+    transform: translateX(-20px);
+}
+
+/* Responsive Design - Simple typography scaling */
+@media (max-width: 992px) {
+    .services-header h1 { font-size: 42px; }
+    .card-content h3 { font-size: 19px; }
+    .card-content p { font-size: 14px; }
+    .section-title { font-size: 28px; }
+    .subject-card p { font-size: 15px; }
+}
+
+@media (max-width: 768px) {
+    .services-header h1 { font-size: 32px; }
+    .service-card { margin-bottom: 25px; }
+    .icon-box { width: 70px; height: 70px; }
+    .card-content { padding: 20px; }
+    .card-content h3 { font-size: 18px; }
+    .card-content p { font-size: 13px; }
+    .section-title { font-size: 24px; }
+    .subject-card { padding: 20px; }
+    .subject-card p { font-size: 14px; }
+}
+
+@media (max-width: 576px) {
+    .services-header h1 { font-size: 26px; }
+    .service-card { margin-bottom: 20px; }
+    .icon-box { width: 60px; height: 60px; }
+    .card-content { padding: 18px; }
+    .card-content h3 { font-size: 16px; }
+    .card-content p { font-size: 12px; }
+    .section-title { font-size: 22px; }
+    .subject-card { padding: 20px 15px; }
+    .subject-card img { width: 60px; height: 60px; }
+    .subject-card p { font-size: 13px; }
+}

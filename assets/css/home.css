@@ -1,0 +1,329 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+/* HERO SECTION */
+.hero-section {
+    background: url("../images/home/myshape.jpg") no-repeat center center/cover;
+    height: 680px;
+    position: relative;
+    margin-top: 0;
+}
+
+.overlay {
+    background: rgba(12, 46, 97, 0.35); /* img brightened */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding-top: 140px;
+}
+
+.top-text {
+    color: #fff;
+    opacity: 0.9;
+    font-size: 18px;
+}
+
+.hero-subtext {
+    max-width: 750px;
+    margin: 0 auto;
+    font-size: 15px;
+}
+
+.stats-row h3 {
+    color: #ffcc00;
+    /* bright yellow */
+    font-size: 36px;
+    font-weight: 700;
+}
+
+
+/* ABOUT */
+.about-text {
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.quote-wrapper {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.quote-bg {
+    width: 300px;
+    /* adjust */
+    height: auto;
+    display: block;
+}
+
+.quote-text {
+    position: absolute;
+    top: 50%;
+    /* vertically center over image */
+    left: 50%;
+    /* horizontally center */
+    transform: translate(-50%, -50%);
+    font-size: 28px;
+    font-weight: 600;
+    color: #1f4da1;
+    /* your blue color */
+    z-index: 2;
+    /* above the image */
+    width: 80%;
+    /* keep text inside shape */
+    line-height: 1.3;
+}
+
+
+/* REGISTER SECTION */
+.register-section {
+    background: #1f4da1;
+}
+
+.reg-card {
+    background: rgba(255, 255, 255, 0.12);
+    padding: 25px;
+    border-radius: 12px;
+    transition: 0.3s;
+    width: 100%;
+    max-width: 100%;
+}
+
+.reg-card:hover {
+    background: rgba(255, 255, 255, 0.22);
+    transform: translateY(-5px);
+}
+
+.shape {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 80px;
+    z-index: 3;
+    pointer-events: none;
+}
+
+/* TESTIMONIAL SECTION */
+.testimonials-section {
+    background: #fff;
+}
+
+.testimonial-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    position: relative;
+    flex-wrap: wrap;
+    max-width: 100%;
+    overflow: visible;
+}
+
+.arrow {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #e5e5e5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 22px;
+    color: #444;
+    transition: 0.3s;
+}
+
+.arrow:hover {
+    background: #d2d2d2;
+}
+
+.testimonial-card {
+    width: 100%;
+    max-width: 460px;
+    min-height: 220px;
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    gap: 18px;
+    padding: 15px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
+    position: relative;
+}
+
+.t-photo {
+    width: 140px;
+    height: 140px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.t-content {
+    flex: 1;
+}
+
+.t-role {
+    font-size: 13px;
+    color: #1f4da1;
+    margin-top: -5px;
+}
+
+.t-desc {
+    font-size: 14px;
+    line-height: 1.45;
+}
+
+.quote-icon {
+    width: 22px;
+    position: absolute;
+    top: 12px;
+    right: 15px;
+}
+
+/* make page full height and layout as column */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* wrapper becomes full viewport height and a column flex container */
+.page-wrapper {
+    min-height: 100vh;
+    /* full screen at minimum */
+    display: flex;
+    flex-direction: column;
+}
+
+/* main content grows to fill available space so footer is pushed down */
+.content {
+    flex: 1 0 auto;
+    /* grow and take remaining space */
+}
+
+/* ensure footer stays at the bottom when page is short */
+.footer-section {
+    flex-shrink: 0;
+    /* don't let footer shrink */
+    background: #3068B1;
+    /* your footer styling (keep existing rules) */
+    /* background: #3068B1 0% 0% no-repeat padding-box; */
+    color: #fff;
+    padding: 40px 0;
+    opacity: 1;
+}
+
+/* Register section link styling (moved from inline) */
+.reg-link {
+    text-decoration: none;
+    display: block;
+}
+
+.reg-icon {
+    height: 60px;
+    width: auto;
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+/* Simple approach: Keep structure, only adjust typography and minimal spacing */
+
+/* TABLET (max-width: 992px) */
+@media (max-width: 992px) {
+    /* Hero typography scaling */
+    .top-text { font-size: 16px; }
+    .hero-content h1 { font-size: 32px; }
+    .hero-subtext { font-size: 14px; }
+    .stats-row h3 { font-size: 30px; }
+    .stats-row p { font-size: 14px; }
+    
+    /* About section */
+    .about-text { font-size: 14px; }
+    .quote-bg { width: 280px; }
+    .quote-text { font-size: 22px; }
+    
+    /* Testimonials */
+    .t-photo { width: 120px; height: 120px; }
+    .t-content h3 { font-size: 15px; }
+    .t-role { font-size: 12px; }
+    .t-desc { font-size: 13px; }
+}
+
+/* MOBILE (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Hero typography */
+    .top-text { font-size: 14px; }
+    .hero-content h1 { font-size: 26px; }
+    .hero-subtext { font-size: 13px; }
+    .stats-row h3 { font-size: 24px; }
+    
+    /* About */
+    .about-text { font-size: 13px; }
+    .quote-wrapper { display: none; }
+    
+    /* Register */
+    .reg-card { padding: 20px; margin-bottom: 15px; }
+    .reg-icon { height: 50px; }
+    
+    /* Testimonials */
+    .testimonial-wrapper { gap: 15px; }
+    .testimonial-card { max-width: 100%; min-height: auto; flex-direction: column; align-items: center; text-align: center; gap: 12px; padding: 12px; }
+    .t-photo { width: 100px; height: 100px; }
+    .t-desc { font-size: 13px; }
+    .arrow { display: none; }
+    .t-content h3 { font-size: 14px; }
+}
+
+/* SMALL MOBILE (max-width: 576px) */
+@media (max-width: 576px) {
+    .hero-content h1 { font-size: 22px; }
+    .hero-subtext { font-size: 12px; }
+    .stats-row h3 { font-size: 20px; }
+    .stats-row p { font-size: 12px; }
+    .about-text { font-size: 12px; }
+    .reg-icon { height: 45px; }
+    .t-photo { width: 85px; height: 85px; }
+    .t-content h3 { font-size: 13px; }
+    .t-desc { font-size: 11px; }
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: #dfe8ff;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #ffdd76;
+}
+
+/* OPTIONAL: ensure fixed-top navbar doesn't overlap content */
+/* body {
+    padding-top: 80px;
+} */
+/* adjust to navbar height (if using .fixed-top) */
+
+/* small responsive tweak so content isn't hidden under navbar */
+/* @media (max-width: 991px) {
+    body {
+        padding-top: 96px;
+    }
+
+} */
+/* adjust if navbar changes on mobile */

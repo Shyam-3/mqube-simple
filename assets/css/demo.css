@@ -1,0 +1,197 @@
+/* ===== FREE DEMO PAGE HERO SECTION ===== */
+body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+.demo-hero {
+    position: relative;
+    height: 380px;
+    width: 100%;
+    background-image: url("../images/teacher/teacher-bg.jpg"); /* change as needed */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.demo-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(20, 80, 150, 0.45); /* bluish transparent overlay */
+}
+
+.demo-hero-content {
+    position: relative;
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+.demo-hero-content h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.demo-hero-content p {
+    font-size: 18px;
+    font-weight: 300;
+}
+.demo-form-section {
+    padding: 40px 0;
+    background: url("../images/teacher/teacher-form-bg.jpg") repeat center;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Form Box */
+.form-box {
+    background: #fff;
+    padding: 28px;
+    border-radius: 14px;
+    border-top: 4px solid #F5C451;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.form-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1F3C88;
+    margin-bottom: 15px;
+}
+
+/* Input Fields */
+.custom-input {
+    border: 2px solid #AFC8E6;
+    border-radius: 8px;
+    height: 45px;
+}
+
+/* Buttons */
+.submit-row {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-reset {
+    background: #fff;
+    border: 2px solid #FF6B6B;
+    color: #FF6B6B;
+    padding: 8px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-reset:hover {
+    background: #FF6B6B;
+    color: #fff;
+}
+
+.btn-submit {
+    background: #F3C331;
+    border: none;
+    padding: 8px 35px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background: #e6b82c;
+}
+
+/* ================= POPUPS ================= */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.45);
+    backdrop-filter: blur(3px);
+    display: none;
+    z-index: 999;
+}
+
+.popup-box {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    width: 380px;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+}
+
+.popup-title {
+    font-size: 20px;
+    color: #1E73BE;
+    font-weight: 600;
+}
+
+.popup-text {
+    margin: 15px 0 25px;
+    font-size: 15px;
+}
+
+.popup-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn-cancel {
+    background: #f2f4ff;
+    border: 1px solid #b3c4ff;
+    padding: 8px 20px;
+    border-radius: 6px;
+}
+
+.btn-yes {
+    background: #ffcc33;
+    padding: 8px 25px;
+    border-radius: 6px;
+    border: none;
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+/* Simple typography scaling */
+
+@media (max-width: 992px) {
+    .demo-hero-content h1 { font-size: 36px; }
+    .demo-hero-content p { font-size: 16px; }
+    .form-title { font-size: 18px; }
+    .popup-title { font-size: 18px; }
+    .popup-text { font-size: 14px; }
+}
+
+@media (max-width: 768px) {
+    .demo-hero-content h1 { font-size: 28px; }
+    .demo-hero-content p { font-size: 14px; }
+    .form-section { padding: 30px 20px; }
+    .form-title { font-size: 16px; }
+    .btn-reset, .btn-submit { font-size: 14px; padding: 10px 20px; }
+}
+
+@media (max-width: 576px) {
+    .demo-hero-content h1 { font-size: 22px; }
+    .demo-hero-content p { font-size: 12px; }
+    .form-section { padding: 25px 15px; }
+    .form-title { font-size: 14px; }
+    .btn-reset, .btn-submit { font-size: 13px; padding: 9px 18px; }
+    .popup-title { font-size: 16px; }
+    .popup-text { font-size: 12px; }
+}

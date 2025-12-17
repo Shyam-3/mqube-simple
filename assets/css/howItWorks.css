@@ -1,0 +1,96 @@
+/* ================= HOW IT WORKS PAGE ================= */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+/* Hero */
+.hiw-hero {
+    position: relative;
+    height: 360px;
+    background: url('../images/howItWorks/how-bg.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hiw-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(12, 46, 97, 0.4);
+}
+
+.hiw-hero-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+}
+
+.hiw-hero-content h1 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+/* Steps Section */
+.hiw-steps {
+    padding: 60px 0;
+    background: #fff;
+}
+
+.step-card {
+    background: #e8f1ff;
+    border-radius: 12px;
+    padding: 25px 20px;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.08);
+    height: 100%;
+    transition: 0.3s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+}
+
+.step-card h4 {
+    color: #2a4c8b;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.step-card p {
+    color: #444;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+@media (max-width: 1024px) {
+    .hiw-hero { height: 300px; }
+    .hiw-hero-content h1 { font-size: 34px; }
+}
+
+@media (max-width: 768px) {
+    .hiw-hero { height: 260px; }
+    .hiw-hero-content h1 { font-size: 26px; }
+    .hiw-steps { padding: 40px 15px; }
+    .step-card { padding: 20px; }
+}
+
+@media (max-width: 576px) {
+    .hiw-hero { height: 220px; }
+    .hiw-hero-content h1 { font-size: 20px; font-weight: 600; }
+    .hiw-steps { padding: 30px 10px; }
+    .step-card { padding: 16px; }
+    .step-card h4 { font-size: 16px; }
+    .step-card p { font-size: 13px; line-height: 1.5; }
+}
+
+@media (max-width: 375px) {
+    .hiw-hero { height: 200px; }
+    .hiw-hero-content h1 { font-size: 18px; }
+}

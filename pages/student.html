@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Registration | MQube Tuitions</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/navbar.css" />
+    <link rel="stylesheet" href="../assets/css/footer.css" />
+    <link rel="stylesheet" href="../assets/css/student.css" />
+</head>
+
+<body>
+
+    <!-- PAGE WRAPPER -->
+    <div class="page-wrapper">
+        <main class="content">
+
+            <!-- NAVBAR -->
+            <nav class="navbar navbar-expand-lg navbar-light shadow-sm fixed-top bg-transparent">
+                <div class="container">
+                    <a class="navbar-brand fw-bold" href="home.html">
+                        <img src="../assets/images/header footer/logo.png" height="45" />
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                        <i class="bi bi-list navbar-toggler-icon-custom"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navmenu">
+                        <ul class="navbar-nav ms-auto align-items-center">
+                            <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="aboutUs.html">About us</a></li>
+                            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                            <li class="nav-item"><a class="nav-link" href="howItWorks.html">How it Works</a></li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Registrations</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="teacher.html">Teachers</a></li>
+                                    <li><a class="dropdown-item" href="student.html">Students</a></li>
+                                    <li><a class="dropdown-item" href="freeDemo.html">Free Demo</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contactUs.html">Contact us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- =============== HERO SECTION =============== -->
+            <section class="student-hero">
+                <div class="student-hero-overlay"></div>
+                <div class="student-hero-content">
+                    <h1>Student Registration</h1>
+                    <p>Register and get matched with expert tutors today.</p>
+                </div>
+            </section>
+
+            <!-- =============== STUDENT FORM START =============== -->
+            <form id="studentForm">
+
+                <section class="student-form-section">
+                    <div class="container">
+
+                        <!-- PROFILE INFO -->
+                        <div class="form-box">
+                            <h4 class="form-title">Profile Information</h4>
+
+                            <div class="row gx-4 gy-3 mt-2">
+                                <div class="col-md-6">
+                                    <label class="form-label">Student Name *</label>
+                                    <input type="text" class="form-control custom-input" required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label">Gender</label>
+                                    <select class="form-select custom-input">
+                                        <option>Select</option>
+                                        <option>Male</option>
+                                        <option>Female</option>
+                                        <option>Prefer not to say</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label">Parent Name *</label>
+                                    <input type="text" class="form-control custom-input" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-box">
+            <h4 class="form-title">Academic & Contact Details</h4>
+
+            <div class="row gx-4 gy-3 mt-2">
+
+                <!-- SUBJECTS DROPDOWN -->
+                <div class="col-md-6">
+                    <label class="form-label">Subjects *</label>
+                    <select class="form-select custom-input">
+                        <option value="">Select</option>
+                        <option>Maths</option>
+                        <option>Physics</option>
+                        <option>Chemistry</option>
+                        <option>Biology</option>
+                        <option>Computer Science</option>
+                        <option>Others</option>
+                    </select>
+                </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Grade/Level *</label>
+                    <select class="form-select custom-input">
+                        <option value="">Select</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                    </select>
+                </div>
+                   <div class="col-md-6">
+                    <label class="form-label">Board *</label>
+                    <select class="form-select custom-input">
+                        <option value="">Select</option>
+                        <option>ISC</option>
+                        <option>ICSE</option>
+                        <option>CBSE</option>
+                        <option>Stateboard</option>
+                        <option>Matriculation</option>
+                        <option>Others</option>
+                    </select>
+                </div>              
+
+                                
+
+                                <div class="col-md-6">
+                                    <label class="form-label">School Name *</label>
+                                    <input type="text" class="form-control custom-input" required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label">Contact No *</label>
+                                    <input type="text" class="form-control custom-input" required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label">Email Id *</label>
+                                    <input type="email" class="form-control custom-input" required>
+                                </div>
+
+                                <div class="col-12">
+                                    <label class="form-label">Address</label>
+                                    <textarea class="form-control custom-input" rows="3"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- HEAR ABOUT US -->
+                        <div class="form-box">
+                            <h4 class="form-title">How Did You Hear About Us?</h4>
+
+                            <div class="row gx-4 gy-3 mt-2">
+                                <div class="col-md-3">
+                                    <label class="radio-option"><input type="radio" name="hear"> News Paper</label>
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="radio-option"><input type="radio" name="hear"> Search Engine</label>
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="radio-option"><input type="radio" name="hear"> Social Media</label>
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="radio-option"><input type="radio" name="hear"> Others</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- BUTTONS -->
+                        <div class="terms-submit-box text-center">
+                            <div class="button-row">
+                                <button type="button" class="btn-reset">Reset</button>
+                                <button type="button" class="btn-submit">Submit</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+            </form>
+
+            <!-- ================= RESET POPUP ================= -->
+            <div id="resetOverlay" class="overlay">
+                <div class="popup-box">
+                    <h3 class="popup-title">Clear the form?</h3>
+                    <p class="popup-text">All entered details will be lost.<br>Do you want to continue?</p>
+                    <div class="popup-buttons">
+                        <button id="resetCancel" class="btn-cancel">Cancel</button>
+                        <button id="resetConfirm" class="btn-yes">Yes, Reset</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================= SUBMIT SUCCESS POPUP ================= -->
+            <div id="successOverlay" class="overlay">
+                <div class="popup-box">
+                    <h3 class="popup-title">Form Submitted!</h3>
+                    <p class="popup-text">Your registration was successfully sent.<br>We'll get back to you soon.</p>
+                    <div class="popup-buttons">
+                        <button id="successOk" class="btn-yes">OK</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="footer-section">
+                <div class="container py-3">
+                    <div class="row gy-4">
+                        <div class="col-md-2 col-6">
+                            <h5 class="footer-title">Quick Links</h5>
+                            <ul class="footer-links">
+                                <li><a href="home.html">Home</a></li>
+                                <li><a href="aboutUs.html">About us</a></li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="howItWorks.html">How it Works</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-2 col-6">
+                            <h5 class="footer-title"><br /></h5>
+                            <ul class="footer-links">
+                                <li><a href="teacher.html">Registrations</a></li>
+                                <li><a href="testimonials.html">Testimonials</a></li>
+                                <li><a href="contactUs.html">Contact us</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-4 col-6">
+                            <h5 class="footer-title">Get in Touch</h5>
+                            <p>📞 +91 7397554929</p>
+                            <p>📧 mqubetuitions@gmail.com</p>
+                            <p>🌐 www.mqubetuitions.com</p>
+                        </div>
+
+                        <div class="col-md-4 col-6">
+                            <h5 class="footer-title">Visit</h5>
+                            <p>MQube Tuitions</p>
+                            <p>3/6 Ganapathy Nagar, L. Poolangulam, Madurai - 20</p>
+                            <ul class="footer-links d-flex gap-4">
+                                <h5 class="footer-title">Follow Us</h5>
+                                <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                                <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+                                <li><a href="#"><i class="bi bi-twitter-x"></i></a></li>
+                                <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+        </main>
+    </div>
+
+    <!-- BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- STUDENT FORM JS -->
+    <script src="../assets/js/studentForm.js"></script>
+
+    <!-- NAVBAR JS -->
+    <script src="../assets/js/navbar.js"></script>
+
+</body>
+</html>

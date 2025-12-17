@@ -1,0 +1,154 @@
+/* CONTACT US PAGE STYLES */
+
+/* Layout helpers to keep footer at the bottom */
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+.page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-section {
+    margin-top: auto;
+}
+
+/* Hero Section */
+.contact-hero {
+    position: relative;
+    height: 300px;
+    background-image: url('../images/contactUs/contact.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-hero .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(48, 104, 177, 0.4);
+    z-index: 1;
+}
+
+.contact-hero .hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+.contact-hero h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: #ffffff;
+    min-height: 400px;
+    padding: 2.5rem 0;
+}
+
+.contact-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #3068b1;
+    margin-bottom: 2rem;
+}
+
+.contact-item {
+    margin-bottom: 1rem;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.contact-icon {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.contact-label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.25rem;
+}
+
+.contact-value {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #666;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Map Section */
+.map-box {
+    background: linear-gradient(135deg, #cfe3ff 0%, #a8d0f7 100%);
+    border-radius: 18px;
+    padding: 1.75rem;
+    box-shadow: 0 4px 15px rgba(48, 104, 177, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.map-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(48, 104, 177, 0.25);
+}
+
+.map-image {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Responsive Design - Simple typography scaling */
+@media (max-width: 992px) {
+    .contact-hero h1 { font-size: 2rem; }
+    .contact-title { font-size: 1.6rem; }
+    .contact-label { font-size: 0.95rem; }
+    .contact-value { font-size: 0.9rem; }
+}
+
+@media (max-width: 768px) {
+    .contact-hero h1 { font-size: 1.7rem; }
+    .contact-title { font-size: 1.4rem; }
+    .contact-item { padding: 20px; margin-bottom: 20px; }
+    .contact-label { font-size: 0.9rem; }
+    .contact-value { font-size: 0.85rem; }
+}
+
+@media (max-width: 576px) {
+    .contact-hero h1 { font-size: 1.4rem; }
+    .contact-title { font-size: 1.2rem; }
+    .contact-item { padding: 18px; margin-bottom: 15px; }
+
+    .map-box {
+        padding: 1rem;
+    }
+}

@@ -1,0 +1,313 @@
+/* =====================================================
+   GLOBAL FORM STYLES
+===================================================== */
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+/* Remove Bootstrap shadow from fixed navbar */
+/* .navbar.bg-transparent {
+    backdrop-filter: blur(6px);
+    background: rgba(255, 255, 255, 0.8) !important;
+} */
+
+/* =====================================================
+   TEACHER REGISTRATION HERO SECTION
+===================================================== */
+
+.teacher-hero {
+    position: relative;
+    height: 420px;
+    /* width: 100%; */
+    background: url("../images/teacher/teacher-bg.jpg") no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.teacher-hero-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(48, 104, 177, 0.50);
+    top: 0;
+    left: 0;
+}
+
+.teacher-hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    max-width: 900px;
+}
+
+.teacher-hero-content h1 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.teacher-hero-content p {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+/* =====================================================
+   TEACHER FORM SECTION WITH BACKGROUND IMAGE
+===================================================== */
+
+.teacher-form-section {
+    padding: 60px 0;
+    background: url("../images/teacher/teacher-form-bg.jpg") center repeat;
+}
+
+/* =====================================================
+   FORM BOXES
+===================================================== */
+
+.form-box {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 28px;
+    margin: 30px auto;
+    border-top: 4px solid #F5C451;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.10);
+    width: 90%;
+}
+
+/* Section Titles */
+.form-title,
+.form-box h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1F3C88;
+    margin-bottom: 20px;
+}
+
+/* Labels */
+.form-label {
+    font-size: 15px;
+    font-weight: 500;
+    color: #1F1F1F;
+    margin-bottom: 6px;
+}
+
+/* Inputs */
+.custom-input,
+.form-control,
+.form-select {
+    height: 45px;
+    border-radius: 8px !important;
+    border: 2px solid #AFC8E6 !important;
+    padding: 8px 12px;
+}
+
+/* Textarea */
+textarea.custom-input {
+    height: auto !important;
+}
+
+/* File Inputs */
+.file-input {
+    height: 45px;
+    border-radius: 8px !important;
+    border: 2px solid #AFC8E6 !important;
+    padding: 8px;
+}
+
+/* =====================================================
+   RADIO BUTTON STYLES
+===================================================== */
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 6px;
+}
+
+.radio-option input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #3068B1;
+}
+
+/* =====================================================
+   TERMS & SUBMIT SECTION
+===================================================== */
+
+.terms-submit-box {
+    width: 100%;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.terms-check {
+    font-size: 16px;
+    color: #1F1F1F;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.terms-check input {
+    width: 20px;
+    height: 20px;
+    accent-color: #3068B1;
+}
+
+/* Buttons container */
+.button-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+/* Reset Button */
+.btn-reset {
+    background: #fff;
+    border: 2px solid #FF6B6B;
+    color: #FF6B6B;
+    padding: 8px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.btn-reset:hover {
+    background: #FF6B6B;
+    color: #fff;
+}
+
+/* Submit Button */
+.btn-submit {
+    background: #F3C331;
+    border: none;
+    padding: 8px 35px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.btn-submit:hover {
+    background: #e6b82c;
+}
+
+/* =====================================================
+   POPUP OVERLAY + POPUP BOXES
+===================================================== */
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(3px);
+    z-index: 999;
+}
+
+.popup-box {
+    background: white;
+    width: 380px;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.2);
+}
+
+.popup-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #1E73BE;
+}
+
+.popup-text {
+    font-size: 15px;
+    color: #444;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+/* Popup Buttons */
+.popup-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn-cancel {
+    background: #f0f4ff;
+    border: 1px solid #b5c7f7;
+    color: #2c4b9a;
+    padding: 8px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-cancel:hover {
+    background: #dfe8ff;
+}
+
+.btn-yes {
+    background: #1E73BE;
+    border: none;
+    padding: 10px 25px;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-yes:hover {
+    background: #155a92;
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+/* Simple typography scaling */
+
+@media (max-width: 992px) {
+    .teacher-hero-content h1 { font-size: 40px; }
+    .teacher-hero-content p { font-size: 18px; }
+    .form-title, .form-box h4 { font-size: 18px; }
+    .form-label { font-size: 14px; }
+}
+
+@media (max-width: 768px) {
+    .teacher-hero-content h1 { font-size: 32px; }
+    .teacher-hero-content p { font-size: 15px; }
+    .teacher-form-section { padding: 30px 20px; }
+    .form-title, .form-box h4 { font-size: 17px; }
+    .form-label { font-size: 13px; }
+    .btn-reset, .btn-submit { font-size: 14px; padding: 10px 20px; }
+    .popup-title { font-size: 18px; }
+    .popup-text { font-size: 14px; }
+}
+
+@media (max-width: 576px) {
+    .teacher-hero-content h1 { font-size: 26px; }
+    .teacher-hero-content p { font-size: 13px; }
+    .teacher-form-section { padding: 25px 15px; }
+    .form-title, .form-box h4 { font-size: 15px; }
+    .form-label { font-size: 12px; }
+    .btn-reset, .btn-submit { font-size: 13px; padding: 9px 18px; }
+    .popup-title { font-size: 16px; }
+    .popup-text { font-size: 12px; }
+}
