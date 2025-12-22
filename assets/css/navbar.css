@@ -153,6 +153,7 @@ html {
     background: transparent;
     border-radius: 6px;
     transition: all 0.3s ease;
+    margin-left: auto; /* push toggle to the far right inside the container */
 }
 
 .navbar-toggler:hover {
@@ -259,9 +260,10 @@ html {
 
     /* When menu is open, hide burger icon and button chrome; show only the close (✕) */
     .navbar-toggler[aria-expanded="true"] {
-        border-color: transparent;
-        background: transparent;
-        box-shadow: none;
+        border: none !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        padding: 0 !important;
     }
 
     .navbar-toggler[aria-expanded="true"] .bi-list,

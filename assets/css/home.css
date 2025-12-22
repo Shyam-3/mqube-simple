@@ -266,7 +266,8 @@ html, body {
     
     /* About */
     .about-text { font-size: 13px; }
-    .quote-wrapper { display: none; }
+    .quote-bg { width: 250px; }
+    .quote-text { font-size: 18px; }
     
     /* Register */
     .reg-card { padding: 20px; margin-bottom: 15px; }

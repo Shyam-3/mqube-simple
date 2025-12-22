@@ -106,6 +106,16 @@ body {
     line-height: 1.6;
 }
 
+.contact-value a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.contact-value a:hover {
+    color: #3068b1;
+    text-decoration: none;
+}
+
 /* Map Section */
 .map-box {
     background: linear-gradient(135deg, #cfe3ff 0%, #a8d0f7 100%);
@@ -125,6 +135,13 @@ body {
     max-width: 320px;
     height: auto;
     object-fit: contain;
+}
+
+.contact-map-iframe {
+    width: 100%;
+    min-height: 320px;
+    border: 0;
+    border-radius: 12px;
 }
 
 /* Responsive Design - Simple typography scaling */
@@ -150,5 +167,9 @@ body {
 
     .map-box {
         padding: 1rem;
+    }
+
+    .contact-map-iframe {
+        min-height: 260px;
     }
 }

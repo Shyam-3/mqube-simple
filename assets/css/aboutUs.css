@@ -54,7 +54,8 @@ body {
 
 /* Quote section layout */
 .quote-bg {
-    width: 480px;
+    width: 100%;
+    max-width: 380px;
     position: relative;
     z-index: 1;
 }
@@ -131,9 +132,9 @@ body {
 .who-box p {
     margin: 0;
     text-align: center;
-    font-size: 40px;      /* Smaller text */
+    font-size: 46px;
     font-weight: 700;
-    line-height: 1.1;
+    line-height: 1.05;
     color: #ffd447;
 }
 /* SECTION TITLE */
@@ -149,9 +150,9 @@ body {
 .offer-box {
     border: 4px solid #f9c74f;
     border-radius: 20px;
-    padding: 40px 35px;
+    padding: 32px 26px;
     display: flex;
-    gap: 40px;
+    gap: 28px;
     position: relative;
     font-family: 'Poppins', sans-serif;
 }
@@ -170,16 +171,7 @@ body {
 
 /* Decorative small yellow circles like your screenshot */
 .offer-box::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 26px;
-    height: 26px;
-    background: #fff;
-    border: 4px solid #f9c74f;
-    border-radius: 50%;
+    display: none;
 }
 
 /* EACH COLUMN */
@@ -191,8 +183,8 @@ body {
 .offer-col p {
     font-size: 15px;
      font-family: 'Poppins', sans-serif;
-    line-height: 1.7;
-    margin-bottom: 18px;
+    line-height: 1.55;
+    margin-bottom: 10px;
     color: #333;
     display: flex;
     align-items: flex-start;
@@ -210,7 +202,7 @@ body {
 .why-online-section {
     background: url("../images/aboutUs/why-bg-pattern.png") repeat;
     background-size: contain;
-    padding: 60px 0;
+    padding: 20px 0;
     border-top: 3px solid #d6e4ff;
     border-bottom: 3px solid #d6e4ff;
     font-family: 'Poppins', sans-serif;
@@ -353,14 +345,18 @@ body {
 
 /* MOBILE (max-width: 768px) */
 @media (max-width: 768px) {
+    .offer-section { padding-top: 28px !important; padding-bottom: 28px !important; }
+    /* Keep two-column split on mobile while making image compact */
+    .about-content .col-6 { padding-left: 8px; padding-right: 8px; }
+    .quote-bg { max-width: 220px; }
     .about-header h1 { font-size: 28px; }
     .about-title { font-size: 22px; }
     .about-text { font-size: 14px; }
     .quote-text-box p { font-size: 18px; }
-    .who-section { margin-top: 30px; }
-    .who-content-box { padding: 25px 20px; min-height: auto; background: #cfe3ff; }
-    .who-box { position: relative; top: auto; left: auto; transform: rotate(-5deg); width: 160px; height: 160px; margin: -80px auto 20px; padding: 20px; }
-    .who-box p { font-size: 22px; }
+    .who-section { margin-top: 30px; display: flex; align-items: center; gap: 12px; }
+    .who-content-box { flex: 1; padding: 16px 14px; min-height: auto; background: #cfe3ff; }
+    .who-box { position: static; transform: rotate(-5deg); width: 45vw; max-width: 180px; height: auto; aspect-ratio: 1/1; margin: 0; padding: 16px; }
+    .who-box p { font-size: 24px; line-height: 1.05; }
     .who-content-box p { font-size: 13px; line-height: 1.6; }
     .offer-title { font-size: 20px; }
     .offer-col p { font-size: 13px; }
@@ -377,17 +373,19 @@ body {
 
 /* SMALL MOBILE (max-width: 576px) */
 @media (max-width: 576px) {
+    /* .offer-section { padding-top: 22px !important; padding-bottom: 22px !important; } */
+    .quote-bg { max-width: 180px; }
     .about-header h1 { font-size: 22px; }
-    .about-title { font-size: 18px; }
+    .about-title { font-size: 18px; padding-top: 10px}
     .about-text { font-size: 12px; }
-    .quote-text-box p { font-size: 16px; }
+    .quote-text-box p { font-size: 10px; }
     .who-section { margin-top: 25px; }
-    .who-content-box { padding: 20px 15px; }
-    .who-box { width: 140px; height: 140px; margin: -70px auto 15px; padding: 15px; }
-    .who-box p { font-size: 18px; }
+    .who-content-box { padding: 14px 12px; }
+    .who-box { max-width: 150px; padding: 12px; }
+    .who-box p { font-size: 30px; line-height: 1.05; }
     .who-content-box p { font-size: 12px; }
-    .offer-title { font-size: 18px; }
-    .offer-box { padding: 20px 15px; }
+    .offer-title { font-size: 18px; margin-bottom: 5px;}
+    .offer-box { padding: 20px 15px; gap: 0; }
     .offer-col p { font-size: 12px; }
     .why-title { font-size: 18px; }
     .why-list li { font-size: 12px; }
